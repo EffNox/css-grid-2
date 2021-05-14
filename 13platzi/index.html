@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <title>Platzi</title>
+
+    <style>
+        body {
+            font-family: 'Itim', cursive;
+            margin: 0;
+        }
+
+
+        .hero {
+            background: #23475b;
+            color: white;
+            padding: 32px 15px;
+            display: grid;
+            grid: none / minmax(auto, 1024px);
+            justify-content: center;
+        }
+
+        .hero-container {
+            display: grid;
+            gap: 10px;
+            grid: none / 70px 1fr 320px;
+            grid-template-areas: "badge title form"
+                ". desc form"
+                ". countdown form";
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: normal;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            grid-area: title;
+        }
+
+        .form {
+            text-align: center;
+            background: rgba(255, 255, 255, .9);
+            padding: 1.5em;
+            border-radius: 10px;
+            grid-area: form;
+        }
+
+        .form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            border: 1px solid #dbdbe2;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .form p {
+            font-size: 20px;
+            color: #3a3b3f;
+            margin-bottom: 1em;
+        }
+
+        .form button {
+            background: #98ca3f;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            border-bottom: 5px solid #6d932b;
+            display: inline-block;
+        }
+
+        .badge {
+            grid-area: badge;
+        }
+
+        .badge img {
+            max-width: 70px;
+        }
+
+        .desc {
+            grid-area: desc;
+        }
+
+        .countdown {
+            grid-area: countdown;
+        }
+
+        .countdown p {
+            font-size: 20px;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        .countdown span {
+            font-size: 33px;
+        }
+
+        .countdown span:after {
+            content: ":";
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .countdown span:last-child:after {
+            content: "";
+        }
+
+        p {
+            margin: 0;
+        }
+
+        @media screen and (max-width:768px) {
+            .hero-container {
+                grid: none / 70px 1fr;
+                grid-template-areas: "badge title"
+                    "desc desc"
+                    "form form"
+                    "countdown countdown"
+                ;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="hero">
+        <div class="hero-container">
+            <div class="badge"><img src="img/1.jpg"></div>
+            <h1 class="title">Curso de Reaj.js</h1>
+            <div class="desc">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error illo dolorem ex aut quaerat ipsum
+                    remquod
+                    hic soluta necessitatibus, harum esse nemo consectetur, ad minima suscipit. Voluptatem,assumenda?
+                    Veniam.</p>
+            </div>
+            <form class="form">
+                <p>Registrte a Platzi</p>
+                <input type="text" placeholder="Nombre...">
+                <input type="email" placeholder="Correo...">
+                <button type="submit">Comienza ahora</button>
+            </form>
+            <div class="countdown">
+                <p>Lanzamiento</p>
+                <p>
+                    <span>01d</span>
+                    <span>03h</span>
+                    <span>09m</span>
+                    <span>05s</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid   : 50px 1fr / none;
+    height : 100vh;
+}
+
+header {
+    display                   : grid;
+    grid                      : none / 1fr 1fr 1fr;
+    justify-content           : space-between;
+    align-items               : center;
+    -webkit-box-shadow        : 0px 17px 30px -18px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow           : 0px 17px 30px -18px rgba(0, 0, 0, 0.23);
+    box-shadow                : 0px 17px 30px -18px rgba(0, 0, 0, 0.23);
+    border                    : 2px solid #E0E0E3;
+    border-bottom-left-radius : 10px;
+    border-bottom-right-radius: 10px;
+    padding                   : 0px 20px;
+}
+
+header img {
+    width : 30px;
+    height: 30px;
+}
+
+header input {
+    width        : 500px;
+    border       : 2px solid #E0E0E3;
+    border-radius: 6px;
+    padding      : 6px;
+    font-weight  : bold;
+    color        : #4444448f;
+    outline      : none;
+    justify-self : end;
+}
+
+header input::placeholder {
+    color  : #E0E0E3;
+    opacity: 1;
+}
+
+.options {
+    cursor      : pointer;
+    justify-self: end;
+    display     : table;
+}
+
+.options span {
+    display       : table-cell;
+    vertical-align: middle;
+    padding       : 0 6px;
+}
+
+.options img {
+    border-radius: 30px;
+}
+
+.options img:last-child {
+    padding: 0 10px;
+    width  : 10px;
+}
+
+.main {
+    display: grid;
+    grid   : none / 80px 1fr;
+    gap    : 20px;
+}
+
+.sidebar {
+    background                : #FE5555;
+    display                   : flex;
+    flex-direction            : column;
+    padding                   : 5px;
+    border-top-right-radius   : 15px;
+    border-bottom-right-radius: 15px;
+    -webkit-box-shadow        : 4px 0px 31px -4px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow           : 4px 0px 31px -4px rgba(0, 0, 0, 0.56);
+    box-shadow                : 4px 0px 31px -4px rgba(0, 0, 0, 0.56);
+}
+
+.sidebar button {
+    border                : 0;
+    background            : transparent;
+    color                 : white;
+    font-weight           : bold;
+    transition            : all .3s ease-in;
+    width                 : 100%;
+    cursor                : pointer;
+    border-radius         : 8px;
+    /* font-size          : 12px; */
+    margin                : 10px 0;
+}
+
+button:hover,
+button:focus {
+    transform : scale(1.09);
+    background: rgba(224, 224, 224, 0.199);
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.sidebar button img {
+    /* filter: invert(250%) sepia(250%) saturate(250%) hue-rotate(87deg) brightness(119%) contrast(250%); */
+    width: 30px;
+}
+
+svg:hover {
+    fill: red;
+}
+
+
+/* CARD */
+
+.cards {
+    display      : grid;
+    grid         : none / repeat(auto-fill, minmax(280px, 1fr));
+    gap          : 20px;
+    /* padding   : 0px 20px; */
+    padding-right: 20px;
+}
+
+.card img {
+    border-radius: 6px;
+    width        : 100%;
+}
+
+.card {
+    cursor  : pointer;
+    position: relative;
+    display : block;
+}
+
+.card .overlay {
+    position       : absolute;
+    left           : 0;
+    right          : 0;
+    bottom         : 4px;
+    top            : 50%;
+    align-items    : center;
+    justify-content: center;
+    background     : #fe55559f;
+    padding        : 5px;
+    border-radius  : 6px;
+    color          : white;
+}
+
+.card .overlay .desc {
+    font-size: 10px;
+}

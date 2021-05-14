@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areas</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            /* grid: repeat(3, 1fr) / repeat(3, 1fr); */
+            /* No es necesario */
+            grid: 50px 1fr 200px / 200px 1fr 1fr;
+            gap: 10px;
+            height: 100vh;
+            grid-template-areas:
+                "header header header"
+                "sidebar content content"
+                "footer footer footer";
+        }
+
+        .item {
+            color: white;
+            background: #282828;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .left {
+            grid-area: sidebar;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <h1>section.container>.item{contenido #$}*12</h1> -->
+    <section class="container">
+        <div class="item header">Header</div>
+        <div class="item sidebar">Left</div>
+        <div class="item content">Content</div>
+        <div class="item footer">Footer</div>
+    </section>
+</body>
+
+</html>

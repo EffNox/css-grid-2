@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IG</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        .post-list {
+            display: grid;
+            grid: none / repeat(3, minmax(100px, 293px));
+            /* grid: none / repeat(auto-fit, minmax(250px, 1fr)); */
+            gap: 1.5em;
+            justify-content: center;
+            justify-items: center;
+            transition: all 1s ease-in;
+        }
+
+        .post {
+            cursor: pointer;
+            position: relative;
+            width: 200px;
+            display: block;
+        }
+
+        .post .img {
+            margin: 0;
+        }
+
+        .post .img img {
+            border-radius: 10px;
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .post .overlay {
+            display: none;
+            background: rgba(0, 0, 0, .4);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .post:hover .overlay {
+            display: grid;
+        }
+
+        .post .likes,
+        .post .comments {
+            width: 80px;
+            margin: 5px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        @media screen and (max-width:768px) {
+            .post-list {
+                display: grid;
+                grid: none / repeat(1, minmax(100px, 293px));
+                gap: .5em;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="post-list">
+
+        <a href="#" class="post">
+            <figure class="img"><img src="img/1.jpg"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/2.png"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/3.png"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/1.jpg"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/2.png"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/3.png"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/1.jpg"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/2.png"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/3.png"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/1.jpg"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/2.png"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/3.png"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/1.jpg"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/2.png"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/3.png"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/1.jpg"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/2.png"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+        <a href="#" class="post">
+            <figure class="img"><img src="img/3.png"></figure>
+            <div class="overlay">
+                <p><span class="likes">150</span><span class="comments">10</span></p>
+            </div>
+        </a>
+
+    </section>
+</body>
+
+</html>
